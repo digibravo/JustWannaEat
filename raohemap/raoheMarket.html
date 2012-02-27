@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Raohe Night Market</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<body onorientationchange="myOrientationChangeFunction()">
+
+
+<link rel="stylesheet" href="css/raoheMap.css" type="text/css" />
+<link rel="apple-touch-icon" href="name.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="images/logo72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="images/logo114.png" />
+
+
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBi7cHfECkwTZZfCJaD_uZpzgr8W3xl72g&size=512x512&sensor=true&language=en"></script>
+<script type="text/javascript" src="js/initialize.js"></script>
+
+
+</head>
+	<body onload="initialize()" style="background-color:#FFFFFF;">
+    <!-- Save for Web Slices (Untitled-1) -->
+    <div id="Table_01">
+        
+        <div id="top_">    
+            <!--<img src="top.jpg" alt="" width="1024" height="47" border="0" usemap="#topMap" id="top" />-->
+            <!--For links that I want to open within the WebApp and not open in Safari-->
+            <a onclick="parent.location='http://www.justwannaeat.com/raoheMap/ipadOrientation.html'">
+            <img src="images/top.jpg" alt="" width="1024" height="47" border="0" usemap="#topMap" id="top" />
+            </a>
+        </div>
+       
+        <div id="map_canvas" width="1024" height="613"></div>
+        
+        <div id="filters_">
+            <img id="filters" src="images/filters.jpg" width="1024" height="89" alt="" />
+        </div>
+    
+    </div>
+    <!-- End Save for Web Slices -->
+</body>
+</html>
