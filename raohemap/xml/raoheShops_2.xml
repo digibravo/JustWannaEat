@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE raoheShops [
+<!ELEMENT raoheShops (Dinner,Drinks,FingerFoods)>
+<!ELEMENT Dinner (shop)>
+<!ELEMENT DDinks (shop)>
+<!ELEMENT FingerFoodsr (shop)>
+<!ELEMENT shop (latlng,title,distance,description,cashCredit,shopImg,foodCategoryImg,openCloseImg,priceImg,ratingImg)>
+<!ELEMENT latlng (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT cashCredit (#PCDATA)>
+]>
+<!ATTLIST shopImg type CDATA "png">
+<!ATTLIST foodCategoryImg type CDATA "png">
+<!ATTLIST openCloseImg type CDATA "png">
+<!ATTLIST priceImg type CDATA "png">
+<!ATTLIST ratingImg type CDATA "png">
+
+<raoheShops>
+	<Dinner>
+		<shop>
+			<latlng>25.050365,121.573173</latlng>
+			<title>Liau Restaurant</title>
+			<distance>1.2 mile</distance>
+			<description>Chinese Cuisine</description>
+			<cashCredit>Cash Only</cashCredit>
+			<shopImg type="png">shopImg.png</shopImg>
+			<foodCategoryImg type="png">foodCategory.png</foodCategoryImg>
+			<openCloseImg type="png">open.png</openCloseImg>
+			<priceImg type="png">price.png</priceImg>
+			<ratingImg type="png">rating_5.png</ratingImg>
+		</shop>
+		<shop>
+			<latlng>25.050214,121.572691</latlng>
+			<title>Stinking Tofu</title>
+			<distance>1.2 mile</distance>
+			<description>Fried Tofu</description>
+			<cashCredit>Cash Only</cashCredit>
+			<shopImg type="png">shopImg.png</shopImg>
+			<foodCategoryImg type="png">foodCategory.png</foodCategoryImg>
+			<openCloseImg type="png">open.png</openCloseImg>
+			<priceImg type="png">price.png</priceImg>
+			<ratingImg type="png">rating_4.png</ratingImg>
+		</shop>
+		<shop>
+			<latlng>25.050272,121.573316</latlng>
+			<title>Wang Beef Noodles</title>
+			<distance>1.5 mile</distance>
+			<description>Beef Noodles</description>
+			<cashCredit>Cash Only</cashCredit>
+			<shopImg type="png">shopImg.png</shopImg>
+			<foodCategoryImg type="png">foodCategory.png</foodCategoryImg>
+			<openCloseImg type="png">open.png</openCloseImg>
+			<priceImg type="png">price.png</priceImg>
+			<ratingImg type="png">rating_4.png</ratingImg>
+		</shop>
+		<shop>
+			<latlng>25.05035,121.574596</latlng>
+			<title>Tappasaki</title>
+			<distance>1.2 mile</distance>
+			<description>Seafood</description>
+			<cashCredit>Cash &amp; Credit</cashCredit>
+			<shopImg type="png">shopImg.png</shopImg>
+			<foodCategoryImg type="png">foodCategory.png</foodCategoryImg>
+			<openCloseImg type="png">closed.png</openCloseImg>
+			<priceImg type="png">price.png</priceImg>
+			<ratingImg type="png">rating_5.png</ratingImg>
+		</shop>
+	</Dinner>
+	<Drinks>
+		<shop>
+			<latlng>25.050059,121.572797</latlng>
+			<title>Tea Shop</title>
+			<distance>1 mile</distance>
+			<description>Soft Drinks</description>
+			<cashCredit>Cash Only</cashCredit>
+			<shopImg type="png">shopImg.png</shopImg>
+			<foodCategoryImg type="png">foodCategory.png</foodCategoryImg>
+			<openCloseImg type="png">closed.png</openCloseImg>
+			<priceImg type="png">price.png</priceImg>
+			<ratingImg type="png">rating_5.png</ratingImg>
+		</shop>
+		<shop>
+			<latlng>25.050341,121.574557</latlng>
+			<title>Bubble Mike Tea</title>
+			<distance>1.2 mile</distance>
+			<description>Soft Drinks</description>
+			<cashCredit>Cash &amp; Credit</cashCredit>
+			<shopImg type="png">shopImg.png</shopImg>
+			<foodCategoryImg type="png">foodCategory.png</foodCategoryImg>
+			<openCloseImg type="png">open.png</openCloseImg>
+			<priceImg type="png">price.png</priceImg>
+			<ratingImg type="png">rating_4.png</ratingImg>
+		</shop>
+		<shop>
+			<latlng>25.050301,121.572866</latlng>
+			<title>Tapioca</title>
+			<distance>1.2 mile</distance>
+			<description>Soft Drinks</description>
+			<cashCredit>Cash Only</cashCredit>
+			<shopImg type="png">shopImg.png</shopImg>
+			<foodCategoryImg type="png">foodCategory.png</foodCategoryImg>
+			<openCloseImg type="png">open.png</openCloseImg>
+			<priceImg type="png">price.png</priceImg>
+			<ratingImg type="png">rating_5.png</ratingImg>
+		</shop>
+		<shop>
+			<latlng>25.050486,121.574035</latlng>
+			<title>Bill Juice</title>
+			<distance>1.2 mile</distance>
+			<description>Juice</description>
+			<cashCredit>Cash &amp; Credit</cashCredit>
+			<shopImg type="png">shopImg.png</shopImg>
+			<foodCategoryImg type="png">foodCategory.png</foodCategoryImg>
+			<openCloseImg type="png">open.png</openCloseImg>
+			<priceImg type="png">price.png</priceImg>
+			<ratingImg type="png">rating_4.png</ratingImg>
+		</shop>
+	</Drinks>
+	<FingerFoods>
+		<shop>
+			<latlng>25.050443,121.57387</latlng>
+			<title>Hau Da Fried Chicken</title>
+			<distance>1.2 mile</distance>
+			<description>Fried Chicken</description>
+			<cashCredit>Cash Only</cashCredit>
+			<shopImg type="png">shopImg.png</shopImg>
+			<foodCategoryImg type="png">foodCategory.png</foodCategoryImg>
+			<openCloseImg type="png">open.png</openCloseImg>
+			<priceImg type="png">price.png</priceImg>
+			<ratingImg type="png">rating_5.png</ratingImg>
+		</shop>
+		<shop>
+			<latlng>25.050469,121.57416</latlng>
+			<title>Pancake</title>
+			<distance>1.2 mile</distance>
+			<description>Pancake</description>
+			<cashCredit>Cash Only</cashCredit>
+			<shopImg type="png">shopImg.png</shopImg>
+			<foodCategoryImg type="png">foodCategory.png</foodCategoryImg>
+			<openCloseImg type="png">closed.png</openCloseImg>
+			<priceImg type="png">price.png</priceImg>
+			<ratingImg type="png">rating_4.png</ratingImg>
+		</shop>
+	</FingerFoods>	
+
+</raoheShops>

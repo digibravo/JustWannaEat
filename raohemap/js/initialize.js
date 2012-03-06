@@ -53,16 +53,16 @@ function initialize() {
 	}
 		
 		var sites = [
-				['Tea Shop', 25.050059,121.572797, 1, 'Now is Open'],
-				['Liau Restaurant', 25.050365,121.573173, 2, 'Now is Open.'],
-				['Hau Da Fried Chicken', 25.050443,121.57387, 3, 'Now is Close'],
-				['Bubble Mike Tea', 25.050341,121.574557, 4, 'Now is Open'],
-				['Stinking Tofu', 25.050214,121.572691, 5, 'Now is Open'],
-				['Tapioca', 25.050301,121.572866, 6, 'Now is Close'],
-				['Wang Beef Noodles', 25.050272,121.573316, 7, 'Now is Closen'],
-				['Bill Juice', 25.050486,121.574035, 8, 'Now is Open'],
-				['Pancake', 25.050469,121.574161, 9, 'Now is Close'],
-				['Tappasaki', 25.05035,121.574596, 10, 'Now is Open']
+				['Tea Shop', 25.050059,121.572797, 1, 'Soft Drinks','Cash Only'],
+				['Liau Restaurant', 25.050365,121.573173, 2, 'Chinese Cuisine','Cash Only'],
+				['Hau Da Fried Chicken', 25.050443,121.57387, 3, 'Fried Chicken','Cash Only'],
+				['Bubble Mike Tea', 25.050341,121.574557, 4, 'Soft Drinks','Cash Only'],
+				['Stinking Tofu', 25.050214,121.572691, 5, 'Fried Tofu','Cash Only'],
+				['Tapioca', 25.050301,121.572866, 6, 'Soft Drinks','Cash Only'],
+				['Wang Beef Noodles', 25.050272,121.573316, 7, 'Beef Noodles','Cash Only'],
+				['Bill Juice', 25.050486,121.574035, 8, 'Juice','Cash Only'],
+				['Pancake', 25.050469,121.574161, 9, 'Pancake','Cash Only'],
+				['Tappasaki', 25.05035,121.574596, 10, 'Seafood','Cash and Credit']
 				];
 		
 		function setMarkers(map, markers) {
@@ -80,12 +80,12 @@ function initialize() {
 			//icon: redMarker,
 			title: sites[0],
 			zIndex: sites[3],
-			html: sites[4]
+			//html: sites[4]
 			
 			});
 			
 			var contentString =
-			'Restaurant:'
+			'Restaurant:'+ sites[0]+sites[4]
 			;
 			
 			var infowindow = new google.maps.InfoWindow({
