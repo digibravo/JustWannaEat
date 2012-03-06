@@ -7,13 +7,15 @@
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT description (#PCDATA)>
 <!ELEMENT cashCredit (#PCDATA)>
-]>
+
 <!ATTLIST shop category (Dinner|Drinks|FingerFoods) "Dinner">
 <!ATTLIST shopImg type CDATA "png">
 <!ATTLIST foodCategoryImg type CDATA "png">
 <!ATTLIST openCloseImg type CDATA "png">
 <!ATTLIST priceImg type CDATA "png">
 <!ATTLIST ratingImg type CDATA "png">
+
+]>
 
 
 <raoheShops>
