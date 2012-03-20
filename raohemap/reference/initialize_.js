@@ -93,6 +93,7 @@ function initialize() {
 				var contentString = 
 				site["title"]+
 				'<div id="distance">'+site["distance"]+'</div>'+
+				'<div id="foodCategoryImg"><img src="'+IMAGE_SERVER_PATH+site["foodCategoryImg"]+'"/></div>'+
 				'<div id="shopImg"><img src="'+IMAGE_SERVER_PATH+site["shopImg"]+'"/></div>'+ 
 				'<div id="ratingImg"><img src="'+IMAGE_SERVER_PATH+site["ratingImg"]+'"/></div>'
 				
