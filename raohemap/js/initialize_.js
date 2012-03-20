@@ -1,44 +1,4 @@
 // JavaScript Document
-var map;
-var infowindow;
-var gmarkers = [];
-var btn=false;
-
-function show(category) {
-	for (var i=0; i<gmarkers.length; i++) {
-    	if (gmarkers[i].mycategory == category ) {
-        	gmarkers[i].setVisible(true);
-			
-       	}else{
-		gmarkers[i].setVisible(false);
-		}
-		
-    }
-    
-}
-
-
-				
-function hide(category) {
-	for (var i=0; i<gmarkers.length; i++) {
-    	if (gmarkers[i].mycategory == category) {
-        	gmarkers[i].setVisible(false);
-			
-       	}
-		
-    }
-    btn = false;
-	//infowindow.close();
-}
-				
-function btnClick(btn,category) {
-	if (btn == false){
-    	show(category);
-	}  
-	
-}
-
-
 
 function initialize() {
 		
@@ -84,7 +44,7 @@ function initialize() {
 		//mapTypeId: google.maps.MapTypeId.ROADMAP
 		}
 		
-		map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 		setMarkers(map, raoheShops);
 		
 		//Associate the styled map with the MapTypeId and set it to display.
@@ -106,39 +66,36 @@ function initialize() {
 ];
 */		
 	function setMarkers(map, markers) {
-		var image = new google.maps.MarkerImage(
-		'images/red.png',
+		var image = new google.maps.MarkerImage('open.png',
 		new google.maps.Size(22,22),
 		new google.maps.Point(0,0),
 		new google.maps.Point(12,12)
 	);
 		
+		for (var key in markers) {
+			console.log(key);
 		
-			for (var i = 0; i < raoheShops.length; i++) {
+			for (var i = 0; i < markers[String(key)].length; i++) {
 				
-				var place = raoheShops[i];
-				var category = place.category;
+				var site = markers[String(key)][i];
+				var siteLatLng = new google.maps.LatLng(site["lat"], site["lng"]);
 				var marker = new google.maps.Marker({
-					position: new google.maps.LatLng(place.lat, place.lng),
+					position: siteLatLng,
 					map: map,
-					//icon: image,
-					title: place.title,
+					icon: image,
+					title: site["title"],
 					zIndex: i,
 					//html: site[4]
 				});
-				
-				marker.mycategory = category;
-				gmarkers.push(marker);
-				
 			
 				// set custom image = IMAGE_SERVER_PATH + site["shopImg"];
 				// http://www.mysite.com/images/shopImg.png
 				
 				var contentString = 
-				place.title+
-				'<div id="distance">'+place.distance+'</div>'+
-				'<div id="shopImg"><img src="'+IMAGE_SERVER_PATH+place.shopImg+'"/></div>'+ 
-				'<div id="ratingImg"><img src="'+IMAGE_SERVER_PATH+place.ratingImg+'"/></div>'
+				site["title"]+
+				'<div id="distance">'+site["distance"]+'</div>'+
+				'<div id="shopImg"><img src="'+IMAGE_SERVER_PATH+site["shopImg"]+'"/></div>'+ 
+				'<div id="ratingImg"><img src="'+IMAGE_SERVER_PATH+site["ratingImg"]+'"/></div>'
 				
 				;
 				createInfoWindow(marker, contentString);
@@ -146,7 +103,7 @@ function initialize() {
 				
 			
 			}
-		
+		}
 				var infowindow = new google.maps.InfoWindow();
 				
 				function createInfoWindow(marker, contentString) {
@@ -157,14 +114,7 @@ function initialize() {
 						infowindow.open(map, this);
 					});
 				}
-				
-				
-
-
-
-				
-
-}
+	}
 	
 	
 				

@@ -1,9 +1,11 @@
 //JSON: Javascript Object Notation
 var IMAGE_SERVER_PATH = "images/";
-var raoheShops = {
-	"dinner": [ { "lat": 25.050365,
+var raoheShops = [
+				 {"check":"true", 
+				  "lat": 25.050365,
 				  "lng": 121.573173,
 				  "category":"dinner",
+				  "icon":"open.png",
 				  "Price":"$",
 				  "Rating":"4",
 				  "title": "Liau Restaurant",
@@ -15,8 +17,10 @@ var raoheShops = {
 				  "openCloseImg": "open.png",
 				  "priceImg": "price.png",
 				  "ratingImg": "rating_5.png"
+				  
 				},
-				{ "lat": 25.050214,
+				{ "check":"true",
+				  "lat": 25.050214,
 				  "lng": 121.572691,
 				  "category":"dinner",
 				  "Price":"$",
@@ -31,7 +35,8 @@ var raoheShops = {
 				  "priceImg": "price.png",
 				  "ratingImg": "rating_4.png"
 				},
-				{ "lat": 25.050272,
+				{ "check":"true",
+				  "lat": 25.050272,
 				  "lng": 121.573316,
 				  "category":"dinner",
 				  "Price":"$$",
@@ -46,7 +51,8 @@ var raoheShops = {
 				  "priceImg": "price.png",
 				  "ratingImg": "rating_5.png"
 				},
-				{ "lat": 25.05035,
+				{ "check":"true",
+				  "lat": 25.05035,
 				  "lng": 121.574596,
 				  "category":"dinner",
 				  "Price":"$",
@@ -60,9 +66,10 @@ var raoheShops = {
 				  "openCloseImg": "open.png",
 				  "priceImg": "price.png",
 				  "ratingImg": "rating_4.png"
-				}
-			  ],	
-	"drinks": [	{ "lat": 25.050059,
+				},
+			  	
+				{ "check":"true", 
+				  "lat": 25.050059,
 				  "lng": 121.572797,
 				  "category":"drinks",
 				  "Price":"$",
@@ -77,7 +84,8 @@ var raoheShops = {
 				  "priceImg": "price.png",
 				  "ratingImg": "rating_5.png"
 				},
-				{ "lat": 25.050341,
+				{ "check":"true",
+				  "lat": 25.050341,
 				  "lng": 121.574557,
 				  "category":"drinks",
 				  "Price":"$",
@@ -92,7 +100,8 @@ var raoheShops = {
 				  "priceImg": "price.png",
 				  "ratingImg": "rating_4.png"
 				},
-				{ "lat": 25.050301,
+				{ "check":"true",
+				  "lat": 25.050301,
 				  "lng": 121.572866,
 				  "category":"drinks",
 				  "Price":"$",
@@ -107,7 +116,8 @@ var raoheShops = {
 				  "priceImg": "price.png",
 				  "ratingImg": "rating_5.png"
 				},
-				{ "lat": 25.050486,
+				{ "check":"true",
+				  "lat": 25.050486,
 				  "lng": 121.574035,
 				  "category":"drinks",
 				  "Price":"$",
@@ -121,38 +131,40 @@ var raoheShops = {
 				  "openCloseImg": "open.png",
 				  "priceImg": "price.png",
 				  "ratingImg": "rating_5.png"
-				}
-			  ],	
-	"fingerfoods": [ { "lat": 25.050443,
-				       "lng": 121.57387,
-				 	   "category":"fingerfoods",
-					   "Price":"$",
-					   "Rating":"4",
-				 	   "title": "Hau Da Fried Chicken",
-				  	   "distance": "1.2 mile",
-				  	   "description": "Fried Chicken Steak",
-				       "cashCredit": "Cash Only",
-				       "shopImg": "shopImg.png",
-				       "foodCategoryImg": "foodCategory.png",
-				       "openCloseImg": "open.png",
-				       "priceImg": "price.png",
-				       "ratingImg": "rating_5.png"
-				     },
-				     { "lat": 25.050469,
-				       "lng": 121.57416,
-					   "category":"fingerfoods",
-					   "Price":"$",
-					   "Rating":"5",
-				       "title": "Pancake",
-				       "distance": "1.2 mile",
-				       "description": "Pancake",
-				       "cashCredit": "Cash Only",
-				       "shopImg": "shopImg.png",
-				       "foodCategoryImg": "foodCategory.png",
-				       "openCloseImg": "open.png",
-				       "priceImg": "price.png",
-				       "ratingImg": "rating_4.png"
-				     }
-			       ]
-}
+				},
+			  	
+				{ "check":"true",
+				  "lat": 25.050443,
+				  "lng": 121.57387,
+				  "category":"fingerfoods",
+				  "Price":"$",
+				  "Rating":"4",
+				  "title": "Hau Da Fried Chicken",
+			      "distance": "1.2 mile",
+		    	  "description": "Fried Chicken Steak",
+			      "cashCredit": "Cash Only",
+	    	      "shopImg": "shopImg.png",
+			      "foodCategoryImg": "foodCategory.png",
+			      "openCloseImg": "open.png",
+			      "priceImg": "price.png",
+			      "ratingImg": "rating_5.png"
+			     },
+			     { "check":"true",
+				   "lat": 25.050469,
+				   "lng": 121.57416,
+				   "category":"fingerfoods",
+				   "Price":"$",
+				   "Rating":"5",
+				   "title": "Pancake",
+				   "distance": "1.2 mile",
+				   "description": "Pancake",
+				   "cashCredit": "Cash Only",
+				   "shopImg": "shopImg.png",
+				   "foodCategoryImg": "foodCategory.png",
+				   "openCloseImg": "open.png",
+				   "priceImg": "price.png",
+				   "ratingImg": "rating_4.png"
+				 }
+			     ]
+
 

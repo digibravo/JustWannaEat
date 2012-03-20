@@ -2,9 +2,10 @@
 var map;
 var infowindow;
 var gmarkers = [];
-var btn=false;
-
-function show(category) {
+var j=0;
+//var check = raoheShops[i].check;
+var btn= true;
+function showFirst(category) {
 	for (var i=0; i<gmarkers.length; i++) {
     	if (gmarkers[i].mycategory == category ) {
         	gmarkers[i].setVisible(true);
@@ -17,7 +18,16 @@ function show(category) {
     
 }
 
-
+function show(category) {
+	for (var i=0; i<gmarkers.length; i++) {
+    	if (gmarkers[i].mycategory == category) {
+        	gmarkers[i].setVisible(true);
+			
+       	} 
+		
+    }
+     btn= true;
+}
 				
 function hide(category) {
 	for (var i=0; i<gmarkers.length; i++) {
@@ -32,9 +42,14 @@ function hide(category) {
 }
 				
 function btnClick(btn,category) {
-	if (btn == false){
-    	show(category);
-	}  
+	if (j==0) {
+    	showFirst(category);
+		j++;
+    } else if(btn == false) {
+       show(category);
+    } else{
+		hide(category);
+	}
 	
 }
 
