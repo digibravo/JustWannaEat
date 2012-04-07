@@ -1,38 +1,17 @@
 @charset "UTF-8";
 /* CSS Document */
 
-
 #Table_01 {
 	position:absolute;
 	left:0px;
 	top:0px;
-	width:1024px;
-	height:749px;
+	width:1024;
+	height:719px;
 }
 
-#top_ {
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:1024px;
-	height:47px;
-}
 
-#map_canvas {
-	position:absolute;
-	left:0px;
-	top:47px;
-	width:1024px;
-	height:613px;
-}
 
-#filters_ {
-	position:absolute;
-	left:0px;
-	top:660px;
-	width:1024px;
-	height:89px;
-}
+
 
 
  html { height: 100% }

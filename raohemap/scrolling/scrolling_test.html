@@ -13,13 +13,13 @@
 	position:absolute;
 	left:0px;
 	top:0px;
-	width:1800px;
+	width:2880px;
 	height:768px;
 }
 
 #top {
 	position:fix;
-	z-index:998;
+	z-index:996;
 	left:0px;
 	top:0px;
 	width:100%;
@@ -28,26 +28,80 @@
 
 #teashop_h {
 	position:fixed;
-	z-index:999;
+	z-index:997;
 	left:50%;
 	top:15px;
 	
 }
 
+#icon_review {
+	position:absolute;
+	z-index:997;
+	width:27px;
+	height:26px;
+	left:85%;
+	top:345px;
+
+}
+
+#icon_share_r {
+	position:absolute;
+	z-index:997;
+	width:46px;
+	height:33px;
+	left:6.5%;
+	top:410px;
+
+}
+
+
+#icon_share {
+	position:absolute;
+	z-index:997;
+	width:46px;
+	height:33px;
+	left:6.5%;
+	top:420px;
+
+}
+
+
+#icon_direction {
+	position:absolute;
+	z-index:997;
+	width:121px;
+	height:33px;
+	left:6.5%;
+	top:845px;
+
+}
+
+
+#icon_favorite_hollow {
+	position:absolute;
+	z-index:997;
+	width:30px;
+	height:28px;
+	left:85%;
+	top:25px;
+
+	
+}
 
 
 #content {
 	position:absolutee;
 	left:0px;
 	top:46px;
-	width:1800px;
+	width:2880px;
 	height:722px;
 	overflow:auto;
 }
 
 
-#dish01 {
+.dish01 {
 	position:relative;
+	z-index:990;
 	left:0px;
 	top:0px;
 	width:360px;
@@ -56,17 +110,15 @@
 	overflow:auto;
 }
 
-#dishes {
+.dishes {
 	position:relative;
-	
 	left:0px;
-	top:o0px;
+	top:0px;
 	width:360px;
 	height:722px;
 	float:right;
 	overflow:auto;
 }
-
 -->
 </style>
 <!-- End Save for Web Styles -->
@@ -78,25 +130,53 @@
 
 	<div id="top">
     	<img id="teashop_h" src="images/teashop_head.png"  width="69" height="18" alt="" />
-		<img src="images/top.jpg"  width=100% height="46" alt="" />
+		<img id="top_bar" src="images/top.jpg"  width=100% height="46" alt="" />
 	</div>
-	<div id="content">
-		
-        <div id="dish01">
-			<img src="images/div.jpg" width="360" height="1240" alt="" />
+	
+    <div id="content">
+    	<div  class="dish01">
+            <img src="images/details.jpg" width=360px height="722" alt="" />
+		</div>    
+        <div  class="dish01">
+        	<img id="icon_share_r" src="images/icon_share.png"  />
+        	<img id="icon_review" src="images/icon_review.png" />
+            <img id="icon_direction" src="images/icon_direction.png"  />
+            <img src="images/div_teashop.jpg" width=360px height="2146" alt="" />
 		</div>
-        <div id="dishes">
-			<img src="images/div.jpg" width="360" height="1240" alt="" />
+        <div  class="dish01">
+            <img src="images/recommend_menu.jpg" width=360px height="722" alt="" />
+		</div>  
+        <div class="dish01">
+        	<img id="icon_share" src="images/icon_share.png"  />
+        	<img id="icon_favorite_hollow" src="images/favoriteIcon_hollow.png"/>
+        	<img id="icon_review" src="images/icon_review.png" />
+			<img src="images/div_teashop_bubble.jpg" width=360px height="1839" alt="" />
 		</div>
-        <div id="dishes">
-			<img src="images/div.jpg" width="360" height="1240" alt="" />
+        <div class="dish01">
+        	<img id="icon_share" src="images/icon_share.png"  />
+         	<img id="icon_favorite_hollow" src="images/favoriteIcon_hollow.png"/>
+        	<img id="icon_review" src="images/icon_review.png" />
+			<img src="images/div_teashop_bubble.jpg" width=360px height="1839" alt="" />
 		</div>
-        <div id="dishes">
-			<img src="images/div.jpg" width="360" height="1240" alt="" />
+        <div class="dish01">
+        	<img id="icon_share" src="images/icon_share.png"  />
+         	<img id="icon_favorite_hollow" src="images/favoriteIcon_hollow.png"/>
+        	<img id="icon_review" src="images/icon_review.png" />
+			<img src="images/div_teashop_bubble.jpg" width=360px height="1839" alt="" />
 		</div>
-        <div id="dishes">
-			<img src="images/div.jpg" width="360" height="1240" alt="" />
+        <div class="dish01">
+        	<img id="icon_share" src="images/icon_share.png"  />
+        	<img id="icon_favorite_hollow" src="images/favoriteIcon_hollow.png"/>
+        	<img id="icon_review" src="images/icon_review.png" />
+			<img src="images/div_teashop_bubble.jpg" width=360px height="1839" alt="" />
 		</div>
+        <div class="dish01">
+        	<img id="icon_share" src="images/icon_share.png"  />
+        	<img id="icon_favorite_hollow" src="images/favoriteIcon_hollow.png"/>
+        	<img id="icon_review" src="images/icon_review.png" />
+			<img src="images/div_teashop_bubble.jpg" width=360px height="1839" alt="" />
+		</div>
+        
 	</div>
 </div>
 <!-- End Save for Web Slices -->

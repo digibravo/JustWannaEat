@@ -2,40 +2,216 @@
 var map;
 var infowindow;
 var gmarkers = [];
-var btn=false;
+var filterMode = "false";
+var currentFilters = [	["category",[]],
+						["price",[]],
+						["rating",[]]
+					];
 
-function show(category) {
+function showAll() {
+	for (var i=0; i<gmarkers.length; i++) {
+        	gmarkers[i].setVisible(true);	
+    }
+	
+	filterMode = "false";
+	
+	//console.log($('#btn-dinner').children()[0]);
+	
+	resetFilterBtn($('#btn-vegetarian').children());
+	resetFilterBtn($('#btn-dinner').children());
+	resetFilterBtn($('#btn-fingerFoods').children());
+	resetFilterBtn($('#btn-icyFoods').children());
+	resetFilterBtn($('#btn-drinks').children());
+	resetFilterBtn($('#btn-favorites').children());
+	
+}
+
+function hideAll() {
+	for (var i=0; i<gmarkers.length; i++) {
+        	gmarkers[i].setVisible(false);	
+    }
+}
+
+
+function showCategory(category) {
 	for (var i=0; i<gmarkers.length; i++) {
     	if (gmarkers[i].mycategory == category ) {
-        	gmarkers[i].setVisible(true);
-			
-       	}else{
-		gmarkers[i].setVisible(false);
-		}
+        	gmarkers[i].setVisible(true);	
+       	}
 		
     }
     
 }
 
 
-				
-function hide(category) {
+function hideCategory(category) {
 	for (var i=0; i<gmarkers.length; i++) {
     	if (gmarkers[i].mycategory == category) {
         	gmarkers[i].setVisible(false);
+		}
+    }
+	//infowindow.close();
+}
+
+function showPrice(price)
+{
+	for (var i=0; i<gmarkers.length; i++) {
+		
+    	if (gmarkers[i].myprice == price ) {
 			
+        	gmarkers[i].setVisible(true);	
        	}
 		
     }
-    btn = false;
-	//infowindow.close();
+}
+
+function hidePrice(price)
+{
+	for (var i=0; i<gmarkers.length; i++) {
+    	if (gmarkers[i].myprice == price ) {
+        	gmarkers[i].setVisible(false);	
+       	}
+		
+    }
+}
+
+
+function toggleFilter(btn)
+{
+	var imagePath = $(btn).attr("src");
+	var subPath;
+	var newPath;
+	var state = $(btn).attr("data-clicked");
+	
+	
+	if(state == "false")//if not focused
+	{
+		//subPath = imagePath.split(".");
+		newPath = imagePath.replace(".", "_down.");
+		$(btn).attr("data-clicked", "true");
+	}
+	else
+	{
+		newPath = imagePath.replace("_down", "");
+		$(btn).attr("data-clicked", "false");
+	}
+	//console.log(state);
+	//console.log(newPath);
+	return newPath;
+	
+}
+
+function resetFilterBtn(btn)
+{
+	var imagePath = $(btn).attr("src");
+	
+	$(btn).attr("data-clicked", "false");
+	$(btn).attr("src", imagePath.replace("_down", ""));
 }
 				
-function btnClick(btn,category) {
-	if (btn == false){
-    	show(category);
-	}  
+function btnClick(btn, category) {
 	
+	setFilter([["category",[category]]]);
+	
+	/*if(filterMode == "true") // in filter mode
+	{	
+		var state = $(btn).attr("data-clicked");
+		
+		if (state == "false")
+		{	
+			showCategory(category);
+			
+			
+		}  else{
+			hideCategory(category);
+		}
+		
+		$(btn).attr("src", toggleFilter(btn));
+		
+	}
+	else // from regular mode to filter mode
+	{
+		hideAll();
+		showCategory(category);
+		filterMode = "true";
+		$(btn).attr("src", toggleFilter(btn));
+		
+	}
+	
+	$('#btn-vegetatian').children().attr("data-clicked", "false");
+	*/
+	
+	/*var state = $(btn).attr("data-clicked");
+	if (state == "false"){
+    	show(category);
+    	$(btn).attr("data-clicked", "true");
+    	console.log(state);
+	}  else{
+		hide(category);
+		$(btn).attr("data-clicked", "false");
+		console.log(state);
+	}*/
+}
+
+function priceClick(btn, price)
+{
+	hideAll();
+	showPrice(price);
+}
+
+function allBtnClick(allBtn) {
+	var state2 = $(allBtn).attr("data-clicked");
+	if (state2 == "false"){
+    	showAll();
+    	$(allBtn).attr("data-clicked", "true");
+    	//console.log(state2);
+	}  else{
+		hideAll();
+		$(allBtn).attr("data-clicked", "false");
+		//console.log(state2);
+	}
+}
+
+
+
+
+function runFilter(markers, filter)
+{
+	var results = [];
+	
+	for(var i=0; i < markers.length; i++)
+	{
+		var filterName = "my" + filter[0];
+		for(var j=0; j<filter[1].length; j++)
+		{
+			if(markers[i][filterName] == filter[1][j])
+			{	//console.log(filter[0]);
+				results.push(markers[i]);
+			}
+		}
+	}
+	return results;
+}
+
+function setFilter(filters)
+{
+	hideAll();
+	
+	var result = runFilter(gmarkers, filters.pop());	
+	//console.log(result);
+	while(filters.length > 0)
+	{
+		//console.log(result);
+		result = runFilter(result, filters.pop());
+		//console.log(result);
+	}
+	
+	
+	
+	for(var i=0; i<result.length; i++)
+	{
+		result[i].setVisible(true);	
+	}
 }
 
 
@@ -117,7 +293,7 @@ function initialize() {
 			for (var i = 0; i < raoheShops.length; i++) {
 				
 				var place = raoheShops[i];
-				var category = place.category;
+				//var category = place.category;
 				var marker = new google.maps.Marker({
 					position: new google.maps.LatLng(place.lat, place.lng),
 					map: map,
@@ -127,7 +303,9 @@ function initialize() {
 					//html: site[4]
 				});
 				
-				marker.mycategory = category;
+				marker.mycategory = place.category;
+				marker.myprice = place.price;
+				marker.myrating = place.rating;
 				gmarkers.push(marker);
 				
 			
@@ -159,10 +337,7 @@ function initialize() {
 				}
 				
 				
-
-
-
-				
+		//setFilter([["category",["drinks","dinner"]],["price","l"]]);
 
 }
 	

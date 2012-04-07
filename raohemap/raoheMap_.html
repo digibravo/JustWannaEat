@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Raohe Night Market</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<body onorientationchange="myOrientationChangeFunction()">
+
+
+<link rel="stylesheet" href="css/raoheMap.css" type="text/css" />
+<link rel="apple-touch-icon" href="name.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="images/logo72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="images/logo114.png" />
+<!-- Save for Web Styles (raoheMap.psd) -->
+<style type="text/css">
+<!--
+
+#Table_01 {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:1024px;
+	height:768px;
+}
+
+#btn-taipeiMarkets {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:233px;
+	height:50px;
+}
+
+#raoheMarket {
+	position:absolute;
+	left:233px;
+	top:0px;
+	width:486px;
+	height:50px;
+}
+
+#btn-getDirections {
+	position:absolute;
+	left:719px;
+	top:0px;
+	width:151px;
+	height:50px;
+}
+
+#btn-help {
+	position:absolute;
+	left:870px;
+	top:0px;
+	width:62px;
+	height:50px;
+}
+
+#btn-list {
+	position:absolute;
+	left:932px;
+	top:0px;
+	width:92px;
+	height:50px;
+}
+
+#raoheMap {
+	position:absolute;
+	left:0px;
+	top:50px;
+	width:1024px;
+	height:628px;
+}
+
+#price {
+	position:absolute;
+	left:0px;
+	top:678px;
+	width:159px;
+	height:39px;
+}
+
+#rating {
+	position:absolute;
+	left:159px;
+	top:678px;
+	width:196px;
+	height:39px;
+}
+
+#btn-vegetatian {
+	position:absolute;
+	left:355px;
+	top:678px;
+	width:114px;
+	height:90px;
+}
+
+#btn-dinner {
+	position:absolute;
+	left:469px;
+	top:678px;
+	width:114px;
+	height:90px;
+}
+
+#btn-fingerfoods {
+	position:absolute;
+	left:583px;
+	top:678px;
+	width:114px;
+	height:90px;
+}
+
+#btn-icyfoods {
+	position:absolute;
+	left:697px;
+	top:678px;
+	width:112px;
+	height:90px;
+}
+
+#btn-drinks {
+	position:absolute;
+	left:809px;
+	top:678px;
+	width:112px;
+	height:90px;
+}
+
+#btn-favorites {
+	position:absolute;
+	left:921px;
+	top:678px;
+	width:103px;
+	height:90px;
+}
+
+#btn-priceL {
+	position:absolute;
+	left:0px;
+	top:717px;
+	width:50px;
+	height:51px;
+}
+
+#btn-priceM {
+	position:absolute;
+	left:50px;
+	top:717px;
+	width:50px;
+	height:51px;
+}
+
+#btn-priceH {
+	position:absolute;
+	left:100px;
+	top:717px;
+	width:59px;
+	height:51px;
+}
+
+#btn-rating1 {
+	position:absolute;
+	left:159px;
+	top:717px;
+	width:61px;
+	height:51px;
+}
+
+#btn-rating2 {
+	position:absolute;
+	left:220px;
+	top:717px;
+	width:27px;
+	height:51px;
+}
+
+#btn-rating3 {
+	position:absolute;
+	left:247px;
+	top:717px;
+	width:28px;
+	height:51px;
+}
+
+#btn-rating4 {
+	position:absolute;
+	left:275px;
+	top:717px;
+	width:27px;
+	height:51px;
+}
+
+#btn-rating5 {
+	position:absolute;
+	left:302px;
+	top:717px;
+	width:53px;
+	height:51px;
+}
+
+-->
+</style>
+<!-- End Save for Web Styles -->
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBi7cHfECkwTZZfCJaD_uZpzgr8W3xl72g&size=512x512&sensor=true&language=en"></script>
+<script type="text/javascript" src="js/shops-model.js"></script>
+<script type="text/javascript" src="js/initialize.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+
+</head>
+<body onload="initialize()" style="background-color:#FFFFFF;">
+<!-- Save for Web Slices (raoheMap.psd) -->
+<div id="Table_01">
+	<div id="btn-taipeiMarkets">
+		<img src="images/btn_taipeiMarkets.jpg" width="233" height="50" alt="javascript button" />
+	</div>
+	<div id="raoheMarket">
+		<img src="images/raoheMarket.jpg" width="486" height="50" alt="" />
+	</div>
+	<div id="btn-getDirections">
+		<img src="images/btn_getDirections.jpg" width="151" height="50" alt="javascript button" />
+	</div>
+	<div id="btn-help">
+		<img src="images/btn_help.jpg" width="62" height="50" alt="javascript button" />
+	</div>
+	<div id="btn-list">
+		<img src="images/btn_list.jpg" width="92" height="50" alt="javascript button" />
+	</div>
+	<div id="map_canvas" width="1024" height="628">
+	</div>
+	<div id="price">
+		<img src="images/price.jpg" width="159" height="39" alt="" />
+	</div>
+	<div id="rating">
+		<img src="images/rating.jpg" width="196" height="39" alt="" />
+	</div>
+	<div id="btn-vegetatian">
+		<img src="images/btn_vegetatian.jpg" data-clicked="false" onclick="allBtnClick(this)" width="114" height="90" alt="javascript button" />
+	</div>
+	<div id="btn-dinner">
+		<!--<img src="images/btn_dinner.jpg" width="114" height="90" alt="javascript button" />-->
+        <input type="image" src="images/btn_dinner.jpg" data-clicked="false" onclick="btnClick(btn,'dinner')" height="90" width="114" BORDER="0" alt="javascript button">
+	</div>
+	<div id="btn-fingerfoods">
+		<!--<img src="images/btn_fingerfoods.jpg" width="114" height="90" alt="javascript button" />-->
+        <input type="image" src="images/btn_fingerfoods.jpg" onclick="btnClick(btn,'fingerfoods')" height="90" width="114" BORDER="0" alt="javascript button">
+	</div>
+	<div id="btn-icyfoods">
+		<img src="images/btn_icyfoods.jpg" width="112" height="90" alt="javascript button" />
+	</div>
+    
+	<div id="btn-drinks">
+		<!--<img src="images/btn_drinks.jpg" width="112" height="90" alt="javascript button" />-->
+        <input type="image" src="images/btn_drinks.jpg" onclick="btnClick(btn,'drinks')" height="90" width="112" BORDER="0" alt="javascript button">
+	</div>
+	<div id="btn-favorites">
+		<img src="images/btn_favorites.jpg" width="103" height="90" alt="javascript button" />
+	</div>
+	<div id="btn-priceL">
+		<img src="images/btn_priceL.jpg" width="50" height="51" alt="javascript button" />
+	</div>
+	<div id="btn-priceM">
+		<img src="images/btn_priceM.jpg" width="50" height="51" alt="javascript button" />
+	</div>
+	<div id="btn-priceH">
+		<img src="images/btn_priceH.jpg" width="59" height="51" alt="javascript button" />
+	</div>
+	<div id="btn-rating1">
+		<img src="images/btn_rating1.jpg" width="61" height="51" alt="javascript button" />
+	</div>
+	<div id="btn-rating2">
+		<img src="images/btn_rating2.jpg" width="27" height="51" alt="javascript button" />
+	</div>
+	<div id="btn-rating3">
+		<img src="images/btn_rating3.jpg" width="28" height="51" alt="javascript button" />
+	</div>
+	<div id="btn-rating4">
+		<img src="images/btn_rating4.jpg" width="27" height="51" alt="javascript button" />
+	</div>
+	<div id="btn-rating5">
+		<img src="images/btn_rating5.jpg" width="53" height="51" alt="javascript button" />
+	</div>
+</div>
+<!-- End Save for Web Slices -->
+</body>
+</html>
