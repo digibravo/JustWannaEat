@@ -12,77 +12,349 @@
 <body onorientationchange="myOrientationChangeFunction()">
 
 
-<link rel="stylesheet" href="css/raoheMap.css" type="text/css" />
+
 <link rel="apple-touch-icon" href="name.png" />
 <link rel="apple-touch-icon" sizes="72x72" href="images/logo72.png" />
 <link rel="apple-touch-icon" sizes="114x114" href="images/logo114.png" />
-
+<!-- Save for Web Styles (raoheMap.psd) -->
 <style type="text/css">
-.orangeSprite
-{
-background-image: url('../images/infowindow.png') !important;
-_background-image: none !important;
-color:black;
-_filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='crop', src='../images/infowindow.png') !important;
-}
+<!--
 
-
+ html { height: 100% }
+ body { height: 100%; margin: 0; padding: 0 }
  
-#distance {
-	position:;
-	float:right;
-	left:;
-	top:0px;
-	width:50px;
-	height:20px;
-}
-
-#foodCategoryImg {
-	position:;
-	left:;
-	top:0px;
-	width:50px;
-	height:20px;
-}
-#shopImg {
-	
+#Table_01 {
+	position:absolute;
 	left:0px;
-	top:30px;
+	top:0px;
+	width:1024;
+	height:100%;
 }
 
-#ratingImg{
-	
-	left:30px;
-	top:30px;
+#btn-taipeiMarkets {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:254px;
+	height:48px;
 }
+
+#raoheMarket {
+	position:absolute;
+	left:254px;
+	top:0px;
+	width:465px;
+	height:48px;
+}
+
+#btn-getDirections {
+	position:absolute;
+	left:719px;
+	top:0px;
+	width:138px;
+	height:48px;
+}
+
+#btn-help {
+	position:absolute;
+	left:857px;
+	top:0px;
+	width:69px;
+	height:48px;
+}
+
+#btn-list {
+	position:absolute;
+	left:926px;
+	top:0px;
+	width:101px;
+	height:48px;
+}
+
+#map_canvas {
+	position:absolute;
+	left:0px;
+	top:47px;
+	width:1024px;
+	height:620px;
+}
+
+#filter {
+	position:absolute;
+	left:0px;
+	top:664px;
+	width:110px;
+	height:84px;
+}
+
+
+#price {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:118px;
+	height:40px;
+}
+
+#rating {
+	position:absolute;
+	left:118px;
+	top:0px;
+	width:136px;
+	height:40px;
+}
+
+#btn-all {
+	position:absolute;
+	left:254px;
+	top:0px;
+	width:111px;
+	height:84px;
+}
+
+#btn-vegetarian {
+	position:absolute;
+	left:365px;
+	top:0px;
+	width:110px;
+	height:84px;
+}
+
+#btn-dinner {
+	position:absolute;
+	left:475px;
+	top:0px;
+	width:110px;
+	height:84px;
+}
+
+#btn-fingerFoods {
+	position:absolute;
+	left:585px;
+	top:0px;
+	width:110px;
+	height:84px;
+}
+
+#btn-icyFoods {
+	position:absolute;
+	left:695px;
+	top:0px;
+	width:110px;
+	height:84px;
+}
+
+#btn-drinks {
+	position:absolute;
+	left:805px;
+	top:0px;
+	width:110px;
+	height:84px;
+}
+
+#btn-favorites {
+	position:absolute;
+	left:915px;
+	top:0px;
+	width:109px;
+	height:84px;
+}
+
+#btn-priceL {
+	position:absolute;
+	left:0px;
+	top:40px;
+	width:37px;
+	height:44px;
+}
+
+#btn-priceM {
+	position:absolute;
+	left:37px;
+	top:40px;
+	width:33px;
+	height:44px;
+}
+
+#btn-priceH {
+	position:absolute;
+	left:70px;
+	top:40px;
+	width:48px;
+	height:44px;
+}
+
+#raoheMap-19 {
+	position:absolute;
+	left:118px;
+	top:40px;
+	width:13px;
+	height:44px;
+}
+
+#btn-rating1 {
+	position:absolute;
+	left:131px;
+	top:40px;
+	width:21px;
+	height:44px;
+}
+
+#btn-rating2 {
+	position:absolute;
+	left:152px;
+	top:40px;
+	width:21px;
+	height:44px;
+}
+
+#raoheMap-22 {
+	position:absolute;
+	left:173px;
+	top:40px;
+	width:3px;
+	height:44px;
+}
+
+#btn-rating3 {
+	position:absolute;
+	left:176px;
+	top:40px;
+	width:21px;
+	height:44px;
+}
+
+#btn-rating4 {
+	position:absolute;
+	left:197px;
+	top:40px;
+	width:21px;
+	height:44px;
+}
+
+#raoheMap-25 {
+	position:absolute;
+	left:218px;
+	top:40px;
+	width:2px;
+	height:44px;
+}
+
+#btn-rating5 {
+	position:absolute;
+	left:220px;
+	top:40px;
+	width:21px;
+	height:44px;
+}
+
+#raoheMap-27 {
+	position:absolute;
+	left:241px;
+	top:40px;
+	width:13px;
+	height:44px;
+}
+
+-->
 </style>
-
+<!-- End Save for Web Styles -->
 
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBi7cHfECkwTZZfCJaD_uZpzgr8W3xl72g&size=512x512&sensor=true&language=en"></script>
 <script type="text/javascript" src="js/shops-model.js"></script>
-<script type="text/javascript" src="js/initialize.js"></script>
-
+<script type="text/javascript" src="js/initialize_raohe.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 
 </head>
-	<body onload="initialize()" style="background-color:#FFFFFF;">
-    <!-- Save for Web Slices (Untitled-1) -->
-    <div id="Table_01">
-        
-        <div id="top_">    
-            <!--<img src="top.jpg" alt="" width="1024" height="47" border="0" usemap="#topMap" id="top" />-->
-            <!--For links that I want to open within the WebApp and not open in Safari-->
-            <a onclick="parent.location='http://www.justwannaeat.com/raoheMap/ipadOrientation.html'">
-            <img src="images/top.jpg" alt="" width="1024" height="47" border="0" usemap="#topMap" id="top" />
-            </a>
-        </div>
-       
-        <div id="map_canvas" width="1024" height="613"></div>
-        
-        <div id="filters_">
-            <img id="filters" src="images/filters.jpg" width="1024" height="89" alt="" />
-        </div>
+<body onload="initialize()" style="background-color:#FFFFFF;">
+<!-- Save for Web Slices (raoheMap.psd) -->
+<div id="Table_01">
+	<div id="btn-taipeiMarkets">
+		<img src="images/btn_taipeiMarkets.jpg" onMouseDown="this.src='images/btn_taipeiMarkets_down.jpg'" onMouseUp="this.src='images/btn_taipeiMarkets.jpg'" width="254" height="48" alt="javascript button" />
+	</div>
+	<div id="raoheMarket">
+		<img src="images/raoheMarket.jpg" width="465" height="48" alt="" />
+	</div>
+	<div id="btn-getDirections">
+		<img src="images/btn_getDirections.jpg" onMouseDown="this.src='images/btn_getDirections_down.jpg'" onMouseUp="this.src='images/btn_getDirections.jpg'" width="138" height="48" alt="javascript button" />
+	</div>
+	<div id="btn-help">
+		<img src="images/btn_help.jpg" onMouseDown="this.src='images/btn_help_down.jpg'" onMouseUp="this.src='images/btn_help.jpg'" width="69" height="48" alt="javascript button" />
+	</div>
+	<div id="btn-list">
+		<img src="images/btn_list.jpg" onMouseDown="this.src='images/btn_list_down.jpg'" onMouseUp="this.src='images/btn_list.jpg'" width="101" height="48" alt="javascript button" />
+	</div>
+	<div id="map_canvas">
+		
+	</div>
     
-    </div>
-    <!-- End Save for Web Slices -->
+    <div id="filter">
+        <div id="price">
+            <img src="images/price.jpg" width="118" height="40" alt="" />
+        </div>
+        <div id="rating">
+            <img src="images/rating.jpg" width="136" height="40" alt="" />
+        </div>
+        <div id="btn-all">
+            <img src="images/btn_all.jpg" data-clicked="true" onclick="allBtnClick(this)" width="111" height="84" alt="javascript button" />
+        </div>
+        <div id="btn-vegetarian">
+            <img src="images/btn_vegetarian.jpg" onMouseDown="this.src='images/btn_vegetarian_down.jpg'" onMouseUp="this.src='images/btn_vegetarian.jpg'" data-clicked="false" onclick="btnClick(this,'vegetarian')" width="110" height="84" alt="javascript button" />
+        </div>
+        <div id="btn-dinner">
+            <img src="images/btn_dinner.jpg" onMouseDown="this.src='images/btn_dinner_down.jpg'" onMouseUp="this.src='images/btn_dinner.jpg'" data-clicked="false" onclick="btnClick(this, 'dinner')"  width="110" height="84" alt="javascript button"/>
+        </div>
+        <div id="btn-fingerFoods">
+            <img src="images/btn_fingerFoods.jpg" onMouseDown="this.src='images/btn_fingerFoods_down.jpg'" onMouseUp="this.src='images/btn_fingerFoods.jpg'" data-clicked="false" onclick="btnClick(this,'fingerFoods')" width="110" height="84" alt="javascript button" />
+        </div>
+        <div id="btn-icyFoods">
+            <img src="images/btn_icyFoods.jpg" onMouseDown="this.src='images/btn_icyFoods_down.jpg'" onMouseUp="this.src='images/btn_icyFoods.jpg'" data-clicked="false" onclick="btnClick(this,'icyFoods')" width="110" height="84" alt=javascript button"" />
+        </div>
+        <div id="btn-drinks">
+            <img src="images/btn_drinks.jpg" onMouseDown="this.src='images/btn_drinks_down.jpg'" onMouseUp="this.src='images/btn_drinks.jpg'" data-clicked="false" onclick="btnClick(this,'drinks')" width="110" height="84" alt="javascript button" />
+            
+        </div>
+        <div id="btn-favorites">
+            <img src="images/btn_favorites.jpg" onMouseDown="this.src='images/btn_favorites_down.jpg'" onMouseUp="this.src='images/btn_favorites.jpg'" data-clicked="false" onclick="favoriteClick(this,'favorite')" width="109" height="84" alt="javascript button" />
+        </div>
+        <div id="btn-priceL">
+            <img src="images/btn_priceL.jpg" width="37" height="44" data-clicked="false" onclick="priceClick(this,'l')" alt="javascript button" />
+        </div>
+        <div id="btn-priceM">
+            <img src="images/btn_priceM.jpg" width="33" height="44" data-clicked="false" onclick="priceClick(this,'m')" alt="javascript button" />
+        </div>
+        <div id="btn-priceH">
+            <img src="images/btn_priceH.jpg" width="48" height="44" data-clicked="false" onclick="priceClick(this,'h')" alt="javascript button" />
+        </div>
+        <div id="raoheMap-19">
+            <img src="images/raoheMap_19.jpg" width="13" height="44" alt="" />
+        </div>
+        <div id="btn-rating1">
+            <img src="images/btn_rating.jpg" width="21" height="44" onclick="rateClick(this,'1')" alt="javascript button" />
+        </div>
+        <div id="btn-rating2">
+            <img src="images/btn_rating.jpg" width="21" height="44" onclick="rateClick(this,'2')" alt="javascript button" />
+        </div>
+        <div id="raoheMap-22">
+            <img src="images/raoheMap_22.jpg" width="3" height="44" alt="" />
+        </div>
+        <div id="btn-rating3">
+            <img src="images/btn_rating.jpg" width="21" height="44" onclick="rateClick(this,'3')" alt="javascript button" />
+        </div>
+        <div id="btn-rating4">
+            <img src="images/btn_rating.jpg" width="21" height="44" onclick="rateClick(this,'4')" alt="javascript button" />
+        </div>
+        <div id="raoheMap-25">
+            <img src="images/raoheMap_25.jpg" width="2" height="44" alt="" />
+        </div>
+        <div id="btn-rating5">
+            <img src="images/btn_rating.jpg" width="21" height="44" onclick="rateClick(this,'5')" alt="javascript button" />
+        </div>
+        <div id="raoheMap-27">
+            <img src="images/raoheMap_27.jpg" width="13" height="44" alt="" />
+        </div>
+	</div>
+</div>
+<!-- End Save for Web Slices -->
 </body>
 </html>

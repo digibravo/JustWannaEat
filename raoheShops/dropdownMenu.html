@@ -1,0 +1,181 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8" /> 
+    <title>HTML5 iPad Popup Menu</title>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+<style>
+
+body{
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#page {
+    text-align: center;
+}
+
+.shareme{
+    display: inline-block;
+    color: #fff;
+    background: #333;
+    padding: 10px;
+}
+
+#share_menu{
+    position: absolute;
+    left: -1000px;
+    background-color: #fff;
+    padding: 20px 0px 0px;
+    background: -webkit-canvas(menu_background) no-repeat;
+    -webkit-transition: opacity 300ms ease-out;
+}
+
+#share_menu a{
+    display: block;
+    margin: 7px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background: -webkit-gradient(linear, 0% 50%, 0% 51%, from(#fff), to(#edeff3));
+}
+
+.hide { 
+    opacity: 0; 
+}
+
+.show {
+    opacity: 1;  
+}
+
+</style>
+<script>
+
+function initMenu(){
+
+    var menu = document.getElementById('share_menu');
+
+    drawMenuBackground(menu.offsetWidth, menu.offsetHeight);
+
+    menu.addEventListener('webkitTransitionEnd', function(e){
+        if(menu.getAttribute('class') == 'hide'){
+            menu.style.setProperty('display','none');
+        }
+    });
+
+    menu.setAttribute('class', 'hide');
+
+}
+
+function drawMenuBackground(rectWidth, rectHeight){
+
+    var context = document.getCSSCanvasContext('2d', 'menu_background', rectWidth, rectHeight);    
+
+    var arrowHeight = 20;
+    var radius = 6;
+    var lineWidth = 1;
+    var pad = lineWidth/2;
+    var xs = pad;
+    var ys = pad + arrowHeight;
+    var xe = rectWidth - pad;
+    var ye = rectHeight - pad;
+
+    var gradient = context.createLinearGradient(rectWidth/2, 0, rectWidth/2, arrowHeight * 2);
+    gradient.addColorStop(0, '#eee'); 
+    gradient.addColorStop(1, '#151d31'); 
+
+    context.beginPath();
+
+    context.lineJoin = 'miter';
+
+    context.moveTo(xs + radius, ys);
+
+    console.log(rectWidth);
+
+    context.lineTo(rectWidth/2 - (arrowHeight + pad), ys);
+    context.lineTo(rectWidth/2, pad);
+    context.lineTo(rectWidth/2 + (arrowHeight + pad), ys);
+
+    context.lineTo(xe - radius, ys);
+
+    context.arcTo(xe, ys, xe, ys + radius, radius);
+
+    context.lineTo(xe, ye - radius);
+    context.arcTo(xe, ye, xe - radius, ye, radius);
+
+    context.lineTo(xs + radius, ye);initMenu
+    context.arcTo(xs, ye, xs, ye - radius, radius);
+
+    context.lineTo(xs, ys + radius);
+    context.arcTo(xs, ys, xs + radius, ys, radius);
+
+    context.fillStyle = gradient;
+
+    //context.fillStyle = '#000';
+    context.globalAlpha = .95;
+    context.fill();
+
+    context.globalAlpha=1;
+
+    context.strokeStyle = '#48484a';
+    context.lineWidth = lineWidth;
+    context.stroke();
+
+}
+
+function showMenu(el){
+
+    var menu = document.getElementById('share_menu');
+
+    menu.style.setProperty('display','block');    
+
+    var targetLeft = el.offsetLeft;
+    var targetBottom = el.offsetHeight;
+    var targetWidth = el.offsetWidth;    
+    var menuWidth = menu.offsetWidth;
+
+    var menuLeft = targetLeft + (targetWidth/2) - (menuWidth/2);
+
+    menu.style.setProperty('top', (targetBottom + 20) + 'px');
+    menu.style.setProperty('left', menuLeft + 'px');
+
+    menu.setAttribute('class', 'show');
+
+    menu.onclick = function(e){
+        if(e.target.tagName.toLowerCase() == 'a'){
+            var type = e.target.innerHTML;
+            var link = el.getAttribute('href');
+            alert(type + 'ing ' + link);
+            menu.setAttribute('class','hide');
+        }
+    }
+}
+
+</script>
+</head> 
+<body onload="initMenu();"> 
+<div id="page">
+    <div>
+    <a class="shareme" href="http://www.russellbeattie.com/blog" onclick="showMenu(this);return false">Share Me</a>
+    </div>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum scelerisque lectus nec porta. Sed sit amet mauris mauris. Nunc tempor scelerisque egestas. Suspendisse potenti. Integer tortor sapien, pharetra sed pretium a, suscipit nec sem. Vivamus eu tellus nec orci eleifend molestie in quis mauris. Quisque quis lorem vitae leo imperdiet sollicitudin ac ut quam. Duis lacinia aliquam magna, a vulputate orci consectetur eu. Suspendisse tincidunt nisl at tellus dapibus placerat. Nam et sem tortor, vitae pharetra ipsum. Quisque luctus egestas nunc, a fermentum lectus rhoncus accumsan. Quisque quis nunc augue, ut semper ligula.
+    </p>
+</div>
+
+<div id="share_menu">
+    <a href="#">Tweet</a>
+    <a href="#">Facebook</a>
+    <a href="#">Email</a>
+ </div>
+
+</body>
+</html> 

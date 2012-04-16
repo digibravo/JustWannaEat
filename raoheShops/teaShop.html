@@ -1,0 +1,281 @@
+<html>
+<head>
+<title>Untitled-1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!-- Save for Web Styles (Untitled-1) -->
+<style type="text/css">
+
+#Table_01 {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:2460px;
+	height:768px;
+}
+
+#top {
+	position:fix;
+	z-index:996;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:46px;
+}
+
+#teashop_h {
+	position:fixed;
+	z-index:997;
+	left:50%;
+	top:15px;
+	
+}
+
+#icon_review {
+	position:absolute;
+	z-index:997;
+	width:27px;
+	height:26px;
+	left:85%;
+	top:345px;
+
+}
+
+#icon_share_r {
+	position:absolute;
+	z-index:997;
+	width:46px;
+	height:33px;
+	left:4.6%;
+	top:430px;
+
+}
+
+#icon_share {
+	position:absolute;
+	z-index:997;
+	width:46px;
+	height:33px;
+	left:6%;
+	top:430px;
+
+}
+
+#btn_share_r {
+	position:absolute;
+	z-index:997;
+	width:65px;
+	height:33px;
+	left:4.6%;
+	top:837px;
+
+}
+
+#btn_share {
+	position:absolute;
+	z-index:997;
+	width:65px;
+	height:33px;
+	left:4.6%;
+	top:585px;
+
+}
+
+
+
+#icon_direction {
+	position:absolute;
+	z-index:997;
+	width:121px;
+	height:33px;
+	left:4.6%;
+	top:525px;
+
+}
+
+
+#icon_favorite_hollow {
+	position:absolute;
+	z-index:997;
+	width:30px;
+	height:28px;
+	left:85%;
+	top:25px;
+
+	
+}
+
+
+#content {
+	position:absolutee;
+	left:0px;
+	top:46px;
+	width:2460px;
+	height:722px;
+	overflow:auto;
+}
+
+
+.restaurant {
+	position:relative;
+	z-index:990;
+	left:0px;
+	top:0px;
+	width:480px;
+	height:722px;
+	float:left;
+	overflow:auto;
+}
+
+.menu {
+	position:relative;
+	z-index:990;
+	left:0px;
+	top:0px;
+	width:180px;
+	height:722px;
+	float:left;
+	overflow:auto;
+}
+
+.dishes {
+	position:relative;
+	left:0px;
+	top:0px;
+	width:360px;
+	height:722px;
+	float:left;
+	overflow:auto;
+}
+
+body{
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.shareme{
+	position: absolute;
+    display: inline-block;
+    color: #fff;
+    background: #333;
+    padding: 10px;
+}
+
+#share_menu{
+    position: absolute;
+	z-index:1000;
+    left: -1000px;
+    background-color: #fff;
+    padding: 20px 0px 0px;
+    background: -webkit-canvas(menu_background) no-repeat;
+    -webkit-transition: opacity 300ms ease-out;
+}
+
+#share_menu a{
+    display: block;
+    margin: 7px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background: -webkit-gradient(linear, 0% 50%, 0% 51%, from(#fff), to(#edeff3));
+}
+
+.hide { 
+    opacity: 0; 
+}
+
+.show {
+    opacity: 1;  
+}
+
+</style>
+<!-- End Save for Web Styles -->
+<script type="text/javascript" src="js/popupMenu.js"></script>
+</head>
+<body onload="initMenu();" >
+<!-- Save for Web Slices (Untitled-1) -->
+
+<div id="Table_01">
+
+	<div id="top">
+    	<img id="teashop_h" src="images/teashop_head.png"  width="69" height="18" alt="" />
+		<img id="top_bar" src="images/top.jpg"  width=100% height="46" alt="" />
+	</div>
+	
+    <div id="content">
+    	
+        <div  class="restaurant">
+        <div id="share_menu">
+            <a href="#">Tweet</a>
+            <a href="#">Facebook</a>
+            <a href="#">Email</a>
+ 		</div>
+        	<a class="" href="" onclick="showMenu(this);return false">		    		
+            <img id="icon_share_r" src="images/icon_share.png"  />
+            </a>
+            <a class="" href="">	
+        	<img id="icon_review" src="images/icon_review.png" />
+            </a>
+            <a class="" href="" onclick="showMenu(this);return false">
+            <img id="btn_share_r" src="images/share_btn.png" />
+            </a>
+            <img id="icon_direction" src="images/icon_direction.png"  />
+            <img src="images/div_teashop.jpg" width="480" height="2137" alt="" />
+		</div>
+        <div  class="menu">
+            <img src="images/div_recommended.jpg" width=180px height="722" alt="" />
+		</div>  
+        <div class="dishes">
+        	<a class="" href="" onclick="showMenu(this);return false">	
+        	<img id="icon_share" src="images/icon_share.png"  />
+       		</a>
+        	<img id="icon_favorite_hollow" src="images/favoriteIcon_hollow.png"/>
+        	<img id="icon_review" src="images/icon_review.png" />
+            <img id="btn_share" src="images/share_btn.png" />
+			<img src="images/div_menu_bubble.jpg" width=360px height="2007" alt="" />
+		</div>
+        <div class="dishes">
+        	<img id="icon_share" src="images/icon_share.png"  />
+         	<img id="icon_favorite_hollow" src="images/favoriteIcon_hollow.png"/>
+        	<img id="icon_review" src="images/icon_review.png" />
+            <img id="btn_share" src="images/share_btn.png" />
+            <img id="btn_share" src="images/share_btn.png" />
+			<img src="images/div_menu_peanut.jpg" width=360px height="2007" alt="" />
+		</div>
+        <div class="dishes">
+        	<img id="icon_share" src="images/icon_share.png"  />
+         	<img id="icon_favorite_hollow" src="images/favoriteIcon_hollow.png"/>
+        	<img id="icon_review" src="images/icon_review.png" />
+            <img id="btn_share" src="images/share_btn.png" />
+			<img src="images/div_menu_hot.jpg" width=360px height="2007" alt="" />
+		</div>
+        <div class="dishes">
+        	<img id="icon_share" src="images/icon_share.png"  />
+        	<img id="icon_favorite_hollow" src="images/favoriteIcon_hollow.png"/>
+        	<img id="icon_review" src="images/icon_review.png" />
+            <img id="btn_share" src="images/share_btn.png" />
+			<img src="images/div_menu_kiwi.jpg" width=360px height="2007" alt="" />
+		</div>
+        <div class="dishes">
+        	<img id="icon_share" src="images/icon_share.png"  />
+        	<img id="icon_favorite_hollow" src="images/favoriteIcon_hollow.png"/>
+        	<img id="icon_review" src="images/icon_review.png" />
+            <img id="btn_share" src="images/share_btn.png" />
+			<img src="images/div_menu_coffee.jpg" width=360px height="2007" alt="" />
+		</div>
+        
+        
+	</div>
+</div>
+<!-- End Save for Web Slices -->
+</body>
+</html>

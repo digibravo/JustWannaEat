@@ -192,7 +192,7 @@
 	height:44px;
 }
 
-#btn-rating {
+#btn-rating1 {
 	position:absolute;
 	left:131px;
 	top:40px;
@@ -200,7 +200,7 @@
 	height:44px;
 }
 
-#raoheMap-21 {
+#btn-rating2 {
 	position:absolute;
 	left:152px;
 	top:40px;
@@ -216,7 +216,7 @@
 	height:44px;
 }
 
-#raoheMap-23 {
+#btn-rating3 {
 	position:absolute;
 	left:176px;
 	top:40px;
@@ -224,7 +224,7 @@
 	height:44px;
 }
 
-#raoheMap-24 {
+#btn-rating4 {
 	position:absolute;
 	left:197px;
 	top:40px;
@@ -240,7 +240,7 @@
 	height:44px;
 }
 
-#raoheMap-25026 {
+#btn-rating5 {
 	position:absolute;
 	left:220px;
 	top:40px;
@@ -256,18 +256,14 @@
 	height:44px;
 }
 
-a:active
-color: #c09;
-background-color: #ccc;
-padding: 5Xp;
-
 -->
 </style>
 <!-- End Save for Web Styles -->
 
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBi7cHfECkwTZZfCJaD_uZpzgr8W3xl72g&size=512x512&sensor=true&language=en"></script>
 <script type="text/javascript" src="js/shops-model.js"></script>
-<script type="text/javascript" src="js/initialize.js"></script>
+<script type="text/javascript" src="js/initialize_raohe.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 
 </head>
 <body onload="initialize()" style="background-color:#FFFFFF;">
@@ -300,7 +296,7 @@ padding: 5Xp;
             <img src="images/rating.jpg" width="136" height="40" alt="" />
         </div>
         <div id="btn-all">
-         <a href="http://yahoo.com"  > <img src="images/btn_all.jpg" onMouseDown="this.src='images/btn_all_down.jpg'" onMouseUp="this.src='images/btn_all.jpg'" data-clicked="false" onclick="allBtnClick(this)" width="111" height="84" alt="javascript button" /></a>
+            <img src="images/btn_all.jpg" data-clicked="true" onclick="allBtnClick(this)" width="111" height="84" alt="javascript button" />
         </div>
         <div id="btn-vegetarian">
             <img src="images/btn_vegetarian.jpg" onMouseDown="this.src='images/btn_vegetarian_down.jpg'" onMouseUp="this.src='images/btn_vegetarian.jpg'" data-clicked="false" onclick="btnClick(this,'vegetarian')" width="110" height="84" alt="javascript button" />
@@ -319,40 +315,40 @@ padding: 5Xp;
             
         </div>
         <div id="btn-favorites">
-            <img src="images/btn_favorites.jpg" onMouseDown="this.src='images/btn_favorites_down.jpg'" onMouseUp="this.src='images/btn_favorites.jpg'" data-clicked="false" onclick="btnClick(this,'favorites')" width="109" height="84" alt="javascript button" />
+            <img src="images/btn_favorites.jpg" onMouseDown="this.src='images/btn_favorites_down.jpg'" onMouseUp="this.src='images/btn_favorites.jpg'" data-clicked="false" onclick="favoriteClick(this,'favorite')" width="109" height="84" alt="javascript button" />
         </div>
         <div id="btn-priceL">
-            <img src="images/btn_priceL.jpg" width="37" height="44" alt="javascript button" />
+            <img src="images/btn_priceL.jpg" width="37" height="44" data-clicked="false" onclick="priceClick(this,'l')" alt="javascript button" />
         </div>
         <div id="btn-priceM">
-            <img src="images/btn_priceM.jpg" width="33" height="44" alt="javascript button" />
+            <img src="images/btn_priceM.jpg" width="33" height="44" data-clicked="false" onclick="priceClick(this,'m')" alt="javascript button" />
         </div>
         <div id="btn-priceH">
-            <img src="images/btn_priceH.jpg" width="48" height="44" alt="javascript button" />
+            <img src="images/btn_priceH.jpg" width="48" height="44" data-clicked="false" onclick="priceClick(this,'h')" alt="javascript button" />
         </div>
         <div id="raoheMap-19">
             <img src="images/raoheMap_19.jpg" width="13" height="44" alt="" />
         </div>
-        <div id="btn-rating">
-            <img src="images/btn_rating.jpg" width="21" height="44" alt="javascript button" />
+        <div id="btn-rating1">
+            <img src="images/btn_rating.jpg" width="21" height="44" onclick="rateClick(this,'1')" alt="javascript button" />
         </div>
-        <div id="raoheMap-21">
-            <img src="images/btn_rating.jpg" width="21" height="44" alt="javascript button" />
+        <div id="btn-rating2">
+            <img src="images/btn_rating.jpg" width="21" height="44" onclick="rateClick(this,'2')" alt="javascript button" />
         </div>
         <div id="raoheMap-22">
             <img src="images/raoheMap_22.jpg" width="3" height="44" alt="" />
         </div>
-        <div id="raoheMap-23">
-            <img src="images/btn_rating.jpg" width="21" height="44" alt="javascript button" />
+        <div id="btn-rating3">
+            <img src="images/btn_rating.jpg" width="21" height="44" onclick="rateClick(this,'3')" alt="javascript button" />
         </div>
-        <div id="raoheMap-24">
-            <img src="images/btn_rating.jpg" width="21" height="44" alt="javascript button" />
+        <div id="btn-rating4">
+            <img src="images/btn_rating.jpg" width="21" height="44" onclick="rateClick(this,'4')" alt="javascript button" />
         </div>
         <div id="raoheMap-25">
             <img src="images/raoheMap_25.jpg" width="2" height="44" alt="" />
         </div>
-        <div id="raoheMap-25026">
-            <img src="images/btn_rating.jpg" width="21" height="44" alt="javascript button" />
+        <div id="btn-rating5">
+            <img src="images/btn_rating.jpg" width="21" height="44" onclick="rateClick(this,'5')" alt="javascript button" />
         </div>
         <div id="raoheMap-27">
             <img src="images/raoheMap_27.jpg" width="13" height="44" alt="" />
