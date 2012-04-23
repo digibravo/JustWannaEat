@@ -1,0 +1,245 @@
+<html>
+<head>
+<title>Untitled-1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!-- Save for Web Styles (Untitled-1) -->
+<style type="text/css">
+
+#Table_01 {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:1024px;
+	height:768px;
+}
+
+#top {
+	position:fixed;
+	z-index:995;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:43px;
+}
+
+#top_bar {
+	position:fixed;
+	z-index:995;
+	width:100%;
+	left:0px;
+	top:0px;
+	
+}
+
+#teashop_h {
+	position:fixed;
+	z-index:997;
+	left:48%;
+	top:10px;
+	
+}
+
+#btn_raoheMarket {
+	position:fixed;
+	z-index:996;
+	left:1.5%;
+	top:6px;
+	
+}
+
+#icon_review {
+	position:absolute;
+	z-index:997;
+	width:27px;
+	height:26px;
+	left:85%;
+	top:345px;
+
+}
+
+.icon_share_r {
+	position:absolute;
+	z-index:997;
+	width:46px;
+	height:33px;
+	left:4.6%;
+	top:430px;
+
+}
+
+.icon_share {
+	position:absolute;
+	z-index:997;
+	width:46px;
+	height:33px;
+	left:22px;
+	top:430px;
+
+}
+
+#btn_share_r {
+	position:absolute;
+	z-index:997;
+	width:65px;
+	height:33px;
+	left:4.6%;
+	top:837px;
+
+}
+
+#btn_share {
+	position:absolute;
+	z-index:997;
+	width:65px;
+	height:33px;
+	left:4.6%;
+	top:585px;
+
+}
+
+
+
+#icon_direction {
+	position:absolute;
+	z-index:997;
+	width:121px;
+	height:33px;
+	left:4.6%;
+	top:525px;
+
+}
+
+
+#icon_favorite_hollow {
+	position:absolute;
+	z-index:997;
+	width:30px;
+	height:28px;
+	left:85%;
+	top:25px;
+
+	
+}
+
+
+#content {
+	position:absolutee;
+	left:0px;
+	top:46px;
+	width:2460px;
+	height:722px;
+	overflow:auto;
+}
+
+
+.restaurant {
+	position:relative;
+	z-index:990;
+	left:0px;
+	top:0px;
+	width:480px;
+	height:722px;
+	float:left;
+	overflow:auto;
+}
+
+.menu {
+	position:relative;
+	z-index:990;
+	left:0px;
+	top:0px;
+	width:180px;
+	height:722px;
+	float:left;
+	overflow:auto;
+}
+
+.dishes {
+	position:relative;
+	left:0px;
+	top:0px;
+	width:360px;
+	height:722px;
+	float:left;
+	overflow:auto;
+}
+
+body{
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.shareme{
+	position: absolute;
+    display: inline-block;
+    color: #fff;
+    background: #333;
+    padding: 10px;
+}
+
+#share_menu{
+    position: absolute;
+	z-index:1000;
+    left: -1000px;
+    background-color: #fff;
+    padding: 20px 0px 0px;
+    background: -webkit-canvas(menu_background) no-repeat;
+    -webkit-transition: opacity 300ms ease-out;
+}
+
+#share_menu a{
+    display: block;
+    margin: 7px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background: -webkit-gradient(linear, 0% 50%, 0% 51%, from(#fff), to(#edeff3));
+}
+
+#review {
+	position:absolute;
+	left:0px;
+	top:42px;
+	width:100%;
+	height:726px;
+}
+
+</style>
+<!-- End Save for Web Styles -->
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/popupMenu.js"></script>
+
+</head>
+<body onLoad="initMenu();" >
+<!-- Save for Web Slices (Untitled-1) -->
+
+<div id="Table_01">
+
+	<div id="top">
+    	<a onClick="parent.location='../raoheMap/raohe_Market.html'">
+        <img id="btn_raoheMarket" src="images/btn_roaheMarket.png" width="165" height="29" alt="" />
+        </a>
+    	<img id="teashop_h" src="images/teashop_head.png" width="69" height="18" alt="" />
+		<img id="top_bar" src="images/top.jpg"  width="1024" height="43" alt="" />
+	</div>
+	
+    <div id="review">
+		<img src="images/review.jpg" alt="" width="1024" height="726" border="0" usemap="#Map">
+        <map name="Map">
+          <area shape="rect" coords="15,11,125,39" onClick="parent.location='../raoheShops/teaShop.html'">
+          <area shape="rect" coords="919,11,998,39" onClick="parent.location='../raoheShops/teaShop.html'">
+          <area shape="rect" coords="0,42,1025,720" onClick="parent.location='../raoheShops/teaShop.html'">
+        </map>
+    </div>
+</body>
+</html>

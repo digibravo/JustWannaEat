@@ -18,18 +18,32 @@
 
 #top {
 	position:fix;
-	z-index:996;
+	z-index:995;
 	left:0px;
 	top:0px;
 	width:100%;
-	height:46px;
+	height:43px;
+}
+
+#top_bar {
+	position:fix;
+	z-index:995;
+	
 }
 
 #teashop_h {
 	position:fixed;
 	z-index:997;
-	left:50%;
-	top:15px;
+	left:48%;
+	top:10px;
+	
+}
+
+#btn_raoheMarket {
+	position:fixed;
+	z-index:996;
+	left:1.5%;
+	top:6px;
 	
 }
 
@@ -43,7 +57,7 @@
 
 }
 
-#icon_share_r {
+.icon_share_r {
 	position:absolute;
 	z-index:997;
 	width:46px;
@@ -53,12 +67,12 @@
 
 }
 
-#icon_share {
+.icon_share {
 	position:absolute;
 	z-index:997;
 	width:46px;
 	height:33px;
-	left:6%;
+	left:22px;
 	top:430px;
 
 }
@@ -114,7 +128,7 @@
 	top:46px;
 	width:2460px;
 	height:722px;
-	overflow:auto;
+
 }
 
 
@@ -127,7 +141,8 @@
 	height:722px;
 	float:left;
 	overflow:auto;
-}
+
+	}
 
 .menu {
 	position:relative;
@@ -137,7 +152,7 @@
 	width:180px;
 	height:722px;
 	float:left;
-	overflow:auto;
+	overflow:scroll;
 }
 
 .dishes {
@@ -147,7 +162,7 @@
 	width:360px;
 	height:722px;
 	float:left;
-	overflow:auto;
+	overflow:scroll;
 }
 
 body{
@@ -189,6 +204,13 @@ a{
     background: -webkit-gradient(linear, 0% 50%, 0% 51%, from(#fff), to(#edeff3));
 }
 
+#innerDiv{
+    
+	width:480px;
+	height:2130px;
+	
+}
+
 .hide { 
     opacity: 0; 
 }
@@ -199,34 +221,38 @@ a{
 
 </style>
 <!-- End Save for Web Styles -->
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/popupMenu.js"></script>
+
 </head>
-<body onload="initMenu();" >
+<body onLoad="initMenu();" >
 <!-- Save for Web Slices (Untitled-1) -->
 
 <div id="Table_01">
 
 	<div id="top">
-    	<img id="teashop_h" src="images/teashop_head.png"  width="69" height="18" alt="" />
-		<img id="top_bar" src="images/top.jpg"  width=100% height="46" alt="" />
+    	<a onClick="parent.location='../taipeiCity/raohe_market.html'">
+        <img id="btn_raoheMarket" src="images/btn_roaheMarket.png" width="165" height="29" alt="" />
+        </a>
+    	<img id="teashop_h" src="images/teashop_head.png" width="69" height="18" alt="" />
+		<img id="top_bar" src="images/top.jpg"  width=100% height="43" alt="" />
 	</div>
 	
     <div id="content">
-    	
+    <div id="shareMenuContainer">
+            <div id="share_menu">
+                <a href="#">Tweet</a>
+                <a href="#">Facebook</a>
+                <a href="mailto:?Subject=">Email</a>
+            </div>
+        </div>
         <div  class="restaurant">
-        <div id="share_menu">
-            <a href="#">Tweet</a>
-            <a href="#">Facebook</a>
-            <a href="#">Email</a>
- 		</div>
-        	<a class="" href="" onclick="showMenu(this);return false">		    		
-            <img id="icon_share_r" src="images/icon_share.png"  />
+        
+        	<a class="" href="" onClick="showMenu(this);return false">		    		
+            <img class="icon_share" data-top="490" data-left="60" src="images/icon_share.png"  />
             </a>
-            <a class="" href="">	
+            <a onClick="parent.location='teaShop_review.html'">	
         	<img id="icon_review" src="images/icon_review.png" />
-            </a>
-            <a class="" href="" onclick="showMenu(this);return false">
-            <img id="btn_share_r" src="images/share_btn.png" />
             </a>
             <img id="icon_direction" src="images/icon_direction.png"  />
             <img src="images/div_teashop.jpg" width="480" height="2137" alt="" />
@@ -235,47 +261,75 @@ a{
             <img src="images/div_recommended.jpg" width=180px height="722" alt="" />
 		</div>  
         <div class="dishes">
-        	<a class="" href="" onclick="showMenu(this);return false">	
-        	<img id="icon_share" src="images/icon_share.png"  />
+        	<a class="" href="" onClick="showMenu(this);return false">	
+        	<img class="icon_share" data-top="490" data-left="705" src="images/icon_share.png"  />
        		</a>
         	<img id="icon_favorite_hollow" src="images/favoriteIcon_hollow.png"/>
+            <a onClick="parent.location='teaShop_review.html'">	
         	<img id="icon_review" src="images/icon_review.png" />
-            <img id="btn_share" src="images/share_btn.png" />
-			<img src="images/div_menu_bubble.jpg" width=360px height="2007" alt="" />
+            </a>
+            <img src="images/div_menu_bubble.jpg" width=360px height="2007" alt="" />
 		</div>
         <div class="dishes">
-        	<img id="icon_share" src="images/icon_share.png"  />
+        	<a class="" href="" onClick="showMenu(this);return false">
+        	<img class="icon_share"  data-top="490" data-left="1065" src="images/icon_share.png"  />
+            </a>
          	<img id="icon_favorite_hollow" src="images/favoriteIcon_hollow.png"/>
+            <a onClick="parent.location='teaShop_review.html'">	
         	<img id="icon_review" src="images/icon_review.png" />
-            <img id="btn_share" src="images/share_btn.png" />
-            <img id="btn_share" src="images/share_btn.png" />
-			<img src="images/div_menu_peanut.jpg" width=360px height="2007" alt="" />
+            </a>
+            <img src="images/div_menu_peanut.jpg" width=360px height="2007" alt="" />
 		</div>
         <div class="dishes">
-        	<img id="icon_share" src="images/icon_share.png"  />
+        	<a class="" href="" onClick="showMenu(this);return false">
+        	<img class="icon_share" data-top="490" data-left="1425" src="images/icon_share.png"  />
+            </a>
          	<img id="icon_favorite_hollow" src="images/favoriteIcon_hollow.png"/>
+            <a onClick="parent.location='teaShop_review.html'">	
         	<img id="icon_review" src="images/icon_review.png" />
-            <img id="btn_share" src="images/share_btn.png" />
-			<img src="images/div_menu_hot.jpg" width=360px height="2007" alt="" />
+            </a>
+            <img src="images/div_menu_hot.jpg" width=360px height="2007" alt="" />
 		</div>
         <div class="dishes">
-        	<img id="icon_share" src="images/icon_share.png"  />
+        	<a class="" href="" onClick="showMenu(this);return false">
+        	<img class="icon_share" data-top="490" data-left="1785" src="images/icon_share.png"  />
+            </a>
+            <a onClick="parent.location='teaShop_done.html'">
         	<img id="icon_favorite_hollow" src="images/favoriteIcon_hollow.png"/>
+            </a>
+            <a onClick="parent.location='teaShop_review.html'">	
         	<img id="icon_review" src="images/icon_review.png" />
-            <img id="btn_share" src="images/share_btn.png" />
-			<img src="images/div_menu_kiwi.jpg" width=360px height="2007" alt="" />
+            </a>
+            <img src="images/div_menu_kiwi.jpg" width=360px height="2007" alt="" />
 		</div>
         <div class="dishes">
-        	<img id="icon_share" src="images/icon_share.png"  />
+        	<a class="" href="" onClick="showMenu(this);return false">
+        	<img class="icon_share" data-top="490" data-left="2145" src="images/icon_share.png"  />
+            </a>
         	<img id="icon_favorite_hollow" src="images/favoriteIcon_hollow.png"/>
+            <a onClick="parent.location='teaShop_review.html'">	
         	<img id="icon_review" src="images/icon_review.png" />
-            <img id="btn_share" src="images/share_btn.png" />
-			<img src="images/div_menu_coffee.jpg" width=360px height="2007" alt="" />
+            </a>
+            <img src="images/div_menu_coffee.jpg" width=360px height="2007" alt="" />
 		</div>
         
         
 	</div>
 </div>
 <!-- End Save for Web Slices -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".icon_share").click(function(){
+			
+			// get the mouse position
+			var left = $(this).data('left');
+			var top = $(this).data('top');
+			
+			$("#shareMenuContainer").css("position","absolute");
+			$("#shareMenuContainer").css("top", top + "px");
+			$("#shareMenuContainer").css("left", left + "px");
+		});
+	});
+</script>
 </body>
 </html>

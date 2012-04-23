@@ -1,4 +1,7 @@
-// JavaScript Document
+// JavaScript Documents
+var show= false;
+
+
 function initMenu(){
 
     var menu = document.getElementById('share_menu');
@@ -72,7 +75,7 @@ function drawMenuBackground(rectWidth, rectHeight){
 }
 
 function showMenu(el){
-
+	
     var menu = document.getElementById('share_menu');
 
     menu.style.setProperty('display','block');    
@@ -86,9 +89,14 @@ function showMenu(el){
 
     menu.style.setProperty('top', (targetBottom + 20) + 'px');
     menu.style.setProperty('left', menuLeft + 'px');
-
+	
+	if(show==false){
     menu.setAttribute('class', 'show');
-
+	show=true;
+	}else{
+	menu.setAttribute('class', 'hide');	
+	show=false;
+	}
     menu.onclick = function(e){
         if(e.target.tagName.toLowerCase() == 'a'){
             var type = e.target.innerHTML;
@@ -97,4 +105,5 @@ function showMenu(el){
             menu.setAttribute('class','hide');
         }
     }
+	
 }

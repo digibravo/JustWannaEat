@@ -1,0 +1,220 @@
+<html>
+<head>
+<title>taipeiMarkets</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+
+
+<link rel="apple-touch-icon" href="name.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="logo72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="logo114.png" />
+<!-- Save for Web Styles (wireframe_raoheMarket.psd) -->
+<!-- Save for Web Styles (taipeiMarkets.psd) -->
+<style type="text/css">
+<!--
+#table{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:1024px;
+	height:768px;
+	overflow:hidden;
+}
+
+#table_taipeiMarkets {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:1024px;
+	height:768px;
+	z-index:10;
+	-webkit-box-shadow: -1px 0px 3px 0px #000;
+	
+}
+
+#table_menu {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:1024px;
+	height:768px;
+	z-index:9;
+}
+
+#btn-taipeiMarkets-menu {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:81px;
+	height:44px;
+}
+
+#taipeiMarkets-bar {
+	position:absolute;
+	left:81px;
+	top:0px;
+	width:943px;
+	height:44px;
+}
+
+#map_canvas {
+	position:absolute;
+	left:0px;
+	top:44px;
+	width:1024px;
+	height:724px;
+}
+
+#taipeiMarkets-menu-search {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:328px;
+	height:44px;
+}
+
+#taipeiMarkets-menu-02 {
+	position:absolute;
+	left:328px;
+	top:0px;
+	width:696px;
+	height:768px;
+}
+
+#taipeiMarkets-menu-taipeiCity {
+	position:absolute;
+	left:0px;
+	top:44px;
+	width:328px;
+	height:45px;
+}
+
+#taipeiMarkets-menu {
+	position:absolute;
+	left:0px;
+	top:89px;
+	width:328px;
+	height:29px;
+}
+
+#taipeiMarkets-menu-raohe {
+	position:absolute;
+	left:0px;
+	top:118px;
+	width:328px;
+	height:45px;
+}
+
+#taipeiMarkets-menu-tonghua {
+	position:absolute;
+	left:0px;
+	top:163px;
+	width:328px;
+	height:44px;
+}
+
+#taipeiMarkets-menu-ningxia {
+	position:absolute;
+	left:0px;
+	top:207px;
+	width:328px;
+	height:44px;
+}
+
+#taipeiMarkets-menu-shilin {
+	position:absolute;
+	left:0px;
+	top:251px;
+	width:328px;
+	height:46px;
+}
+
+#taipeiMarkets-menu-hauxi {
+	position:absolute;
+	left:0px;
+	top:297px;
+	width:328px;
+	height:45px;
+}
+
+#taipeiMarkets-menu-10 {
+	position:absolute;
+	left:0px;
+	top:342px;
+	width:328px;
+	height:426px;
+}
+
+
+
+
+-->
+</style>
+<!-- End Save for Web Styles -->
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBi7cHfECkwTZZfCJaD_uZpzgr8W3xl72g&size=512x512&sensor=true&language=en"></script>
+<script type="text/javascript" src="js/raoheShops_model.js"></script>
+<script type="text/javascript" src="js/initialize_taipeiMarkets.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+
+</head>
+<body  onload="initialize()" style="background-color:#FFFFFF; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;">
+<!-- Save for Web Slices (taipeiMarkets.psd) -->
+<div id="table">
+    <div id="table_taipeiMarkets">
+        <div id="btn-taipeiMarkets-menu">
+            <img src="images/btn_taipeiMarkets_menu.jpg" data-clicked="true" onClick="menuClick()" width="81" height="44" alt="">
+        </div>
+        <div id="taipeiMarkets-bar">
+            <img src="images/taipeiMarkets_bar.jpg" width="943" height="44" alt="">
+        </div>
+        <div id="map_canvas">
+        
+        </div>
+    </div>
+    <div id="table_menu">
+    	<div id="taipeiMarkets-menu-search">
+			<img src="images/taipeiMarkets_menu_search.jpg" width="328" height="44" alt="">
+            </
+        </div>
+        <div id="taipeiMarkets-menu-02">
+            <img src="images/taipeiMarkets_menu_02.jpg" width="696" height="768" alt="">
+        </div>
+        <div id="taipeiMarkets-menu-taipeiCity">
+            <img src="images/taipeiMarkets_menu_taipeiCity.jpg" width="328" height="45" alt="">
+        </div>
+        <div id="taipeiMarkets-menu">
+            <img src="images/taipeiMarkets_menu.jpg" width="328" height="29" alt="">
+        </div>
+        <div id="taipeiMarkets-menu-raohe">
+            <a onClick="parent.location='raohe_Market.html'">
+            <img src="images/taipeiMarkets_menu_raohe.jpg" width="328" height="45" alt="">
+            </a>
+        </div>
+        <div id="taipeiMarkets-menu-tonghua">
+            <img src="images/taipeiMarkets_menu_tonghua.jpg" width="328" height="44" alt="">
+        </div>
+        <div id="taipeiMarkets-menu-ningxia">
+            <img src="images/taipeiMarkets_menu_ningxia.jpg" width="328" height="44" alt="">
+        </div>
+        <div id="taipeiMarkets-menu-shilin">
+            <img src="images/taipeiMarkets_menu_shilin.jpg" width="328" height="46" alt="">
+        </div>
+        <div id="taipeiMarkets-menu-hauxi">
+            <img src="images/taipeiMarkets_menu_hauxi.jpg" width="328" height="45" alt="">
+        </div>
+        <div id="taipeiMarkets-menu-10">
+            <img src="images/taipeiMarkets_menu_10.jpg" width="328" height="426" alt="">
+        </div>
+       
+    </div>
+    
+</div>
+<!-- End Save for Web Slices -->
+</body>
+</html>
