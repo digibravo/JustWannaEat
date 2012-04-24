@@ -3,15 +3,16 @@ var IMAGE_SERVER_PATH = "images/";
 var IMAGE_LINK_PATH = "../raoheShops/";
 var SHOP_LINK_PATH = "parent.location='../raoheShops/";
 var marketData = [
+					
 					{
 						"title": "Raohe Night Market",
 						"lat": 25.050365,
 				 		"lng": 121.573173,
 						"distance": 1.2,
 						"markerImg": "1.png" ,
-						"marketImg": "1.png" ,
+						"markerLink":"",
 						"tagline": "The first Taipei night market",
-						"marketIcon": "marketIcon_raohe.jpg"	
+						"marketIcon": "marketIcon_raohe.png"	
 						
 					},
 					{
@@ -22,7 +23,7 @@ var marketData = [
 						"markerImg": "1.png" ,
 						"marketImg": "1.png" ,
 						"tagline": "Asitable market for visitors on a tight schedule",
-						"marketIcon": "marketIcon_tonghua.jpg"		
+						"marketIcon": "marketIcon_tonghua.png"		
 						
 					},
 					{
@@ -33,7 +34,7 @@ var marketData = [
 						"markerImg": "1.png" ,
 						"marketImg": "1.png" ,
 						"tagline": "Tourists' favorite market",
-						"marketIcon": "marketIcon_hauxi.jpg"	
+						"marketIcon": "marketIcon_hauxi.png"	
 						
 					},
 					{
@@ -44,7 +45,7 @@ var marketData = [
 						"markerImg": "1.png" ,
 						"marketImg": "1.png" ,
 						"tagline": "The biggest Taipei night market",
-						"marketIcon": "marketIcon_shilin.jpg"	
+						"marketIcon": "marketIcon_shilin.png"	
 						
 					},
 					{
@@ -55,7 +56,18 @@ var marketData = [
 						"markerImg": "1.png" ,
 						"marketImg": "1.png" ,
 						"tagline": "The smallest Taipei night market",
-						"marketIcon": "marketIcon_ningxia.jpg"	
+						"marketIcon": "marketIcon_ningxia.png"	
+						
+					},
+					{
+						"title": "You are here!",
+						"lat": 25.059265, 
+				 		"lng": 121.543550,
+						"distance": 0,
+						"markerImg": "1.png" ,
+						"marketImg": "1.png" ,
+						"tagline": "",
+						"marketIcon": "youAreHere.png"	
 						
 					}
 					
@@ -83,6 +95,7 @@ var raoheShops = [
 				  "ratingImg": "rating_5.png",
 				  "favorite": "",
 				  "getDirectionImg": "btn_getDirections.png",
+				  "filterIcon": "filterIcons_dinner.png",
 				  "listLink": "images/liau_list.jpg"
 				  
 				},
@@ -104,6 +117,7 @@ var raoheShops = [
 				  "ratingImg": "rating_4.png",
 				  "favorite": "favorite",
 				  "getDirectionImg": "btn_getDirections.png",
+				  "filterIcon": "filterIcons_vegetarian.png",
 				  "listLink": "images/stinking_list.jpg"
 				},
 				{ "check":"true",
@@ -124,6 +138,7 @@ var raoheShops = [
 				  "ratingImg": "rating_5.png",
 				  "favorite": "favorite",
 				  "getDirectionImg": "btn_getDirections.png",
+				  "filterIcon": "filterIcons_dinner.png",
 				  "listLink": "images/wangBeef_list.jpg"
 				},
 				{ "check":"true",
@@ -144,6 +159,7 @@ var raoheShops = [
 				  "ratingImg": "rating_4.png",
 				  "favorite": "",
 				  "getDirectionImg": "btn_getDirections.png",
+				  "filterIcon": "filterIcons_dinner.png",
 				  "listLink": "images/tappasaki_list.jpg"
 				},
 			  	
@@ -165,6 +181,7 @@ var raoheShops = [
 				  "ratingImg": "rating_5.png",
 				  "favorite": "favorite",
 				  "getDirectionImg": "btn_getDirections.png",
+				  "filterIcon": "filterIcons_drinks.png",
 				  "listLink": "images/teaShop_list.jpg"
 				},
 				{ "check":"true",
@@ -185,6 +202,7 @@ var raoheShops = [
 				  "ratingImg": "rating_4.png",
 				  "favorite": "favorite",
 				  "getDirectionImg": "btn_getDirections.png",
+				  "filterIcon": "filterIcons_drinks.png",
 				  "listLink": "images/iceTea_list.jpg"
 				},
 				{ "check":"true",
@@ -205,6 +223,7 @@ var raoheShops = [
 				  "ratingImg": "rating_5.png",
 				  "favorite": "",
 				  "getDirectionImg": "btn_getDirections.png",
+				  "filterIcon": "filterIcons_vegetarian.png",
 				  "listLink": "images/juiceShop_list.jpg"
 				},
 				{ "check":"true",
@@ -225,6 +244,7 @@ var raoheShops = [
 				  "ratingImg": "rating_5.png",
 				  "favorite": "favorite",
 				  "getDirectionImg": "btn_getDirections.png",
+				  "filterIcon": "filterIcons_icyFoods.png",
 				  "listLink": "images/shavedIce_list.jpg"
 				},
 			  	
@@ -246,6 +266,7 @@ var raoheShops = [
 			      "ratingImg": "rating_5.png",
 				  "favorite": "",
 				  "getDirectionImg": "btn_getDirections.png",
+				  "filterIcon": "filterIcons_fingerFoods.png",
 				  "listLink": "images/hauda_list.jpg"
 			     },
 			     { "check":"true",
@@ -266,6 +287,7 @@ var raoheShops = [
 				   "ratingImg": "rating_4.png",
 				  "favorite": "favorite",
 				  "getDirectionImg": "btn_getDirections.png",
+				  "filterIcon": "filterIcons_fingerFoods.png",
 				  "listLink": "images/pancake_list.jpg"
 				 }
 			     ]

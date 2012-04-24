@@ -381,33 +381,100 @@ function setRatingBtn(num)
 
 function initialize() {
 		
-		// Create an array of styles.
-		var marketStyles = [
-		{ featureType: "poi.business", 
-			stylers: [ { visibility: "off" } 
-			] },
-		{ featureType: "road", 
-			stylers: [ { lightness: 58 }, { hue: "#ff6e00" }, { gamma: 0.63 }
-			] },
-		{ featureType: "poi.park", 
-			stylers: [ { hue: "#ff5500" }, { saturation: 84 }, { gamma: 0.43 }
-			] },
-		{ featureType: "water", 
-			stylers: [ { hue: "#004a80" }, { saturation: 84 }, { lightness: -30 }
-			] },
-		{ featureType: "road", elementType: "labels", 
-			stylers: [ { hue: "#000000" }, { lightness: 32 }
-			] },
-		{ featureType: "transit",
-			stylers: [ { visibility: "off" } 
-			] },
-		{ featureType: "poi.school", 
-			stylers: [ { visibility: "off" } 
-			] },
-		{ featureType: "landscape", 
-			stylers: [ { hue: "#ff0000" } 
-			] }
-		];
+	// Create an array of styles.
+	var marketStyles =
+		[
+		  {
+			stylers: [
+			  { visibility: "simplified" }
+			]
+		  },{
+			elementType: "labels",
+			stylers: [
+			  { visibility: "off" }
+			]
+		  },{
+			featureType: "administrative.locality",
+			stylers: [
+			  { visibility: "on" }
+			]
+		  },{
+			featureType: "road.local",
+			elementType: "geometry",
+			stylers: [
+			  { hue: "#ffb300" },
+			  { visibility: "off" }
+			]
+		  },{
+			featureType: "road.highway",
+			stylers: [
+			  { visibility: "off" }
+			]
+		  },{
+			featureType: "road.arterial",
+			stylers: [
+			  { hue: "#ff5500" },
+			  { saturation: -95 },
+			  { visibility: "simplified" }
+			]
+		  },{
+			featureType: "landscape.man_made",
+			stylers: [
+			  { visibility: "off" }
+			]
+		  },{
+			featureType: "poi",
+			stylers: [
+			  { visibility: "off" }
+			]
+		  },{
+			featureType: "landscape",
+			stylers: [
+			  { gamma: 0.46 },
+			  { lightness: 40 },
+			  { saturation: 98 },
+			  { hue: "#ff8800" }
+			]
+		  },{
+			featureType: "road.arterial",
+			stylers: [
+			  { hue: "#ff5e00" },
+			  { saturation: 93 },
+			  { lightness: 13 },
+			  { visibility: "simplified" }
+			]
+		  },{
+			featureType: "poi.park",
+			stylers: [
+			  { visibility: "on" },
+			  { saturation: 1 },
+			  { lightness: -1 }
+			]
+		  },{
+			featureType: "water",
+			stylers: [
+			  { gamma: 1.06 },
+			  { lightness: 8 },
+			  { saturation: 65 }
+			]
+		  },{
+			featureType: "transit",
+			stylers: [
+			  { visibility: "off" }
+			]
+		  },{
+			featureType: "road.local",
+			stylers: [
+			  { visibility: "simplified" }
+			]
+		  },{
+			featureType: "road.arterial",
+			stylers: [
+			  { visibility: "on" }
+			]
+		  }
+		]	
+		
 		
 		// Create a new StyledMapType object, passing it the array of styles,
 		// as well as the name to be displayed on the map type control.
@@ -498,12 +565,13 @@ function setMarkers(map) {
 			{
 				
 				var place = raoheShops[i];
+				var image = new google.maps.MarkerImage(IMAGE_SERVER_PATH+place.filterIcon);
 				//var category = place.category;
 				var marker = new google.maps.Marker(
 				{
 					position: new google.maps.LatLng(place.lat, place.lng),
 					map: map,
-					//icon: image,
+					icon: image,
 					title: place.title,
 					zIndex: i,
 					//html: site[4]
